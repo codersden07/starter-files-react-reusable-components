@@ -1,0 +1,78 @@
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    font-family:  'Poppins', sans-serif;
+    background-color:#111;
+    padding: 50px 0;
+    overflow: hidden;
+}
+
+/* Button Component */
+
+.button-styles{
+    height: 4rem;
+    width: 10rem;
+    color:#DFFC4A;
+    border: 2px solid #DFFC4A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    position: relative;
+    border-radius: 500px;
+    transition: all 0.6s;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    overflow: hidden;
+    background: transparent;
+    cursor: pointer;
+}
+
+.right-round{
+border-top-left-radius: 0;
+border-bottom-left-radius: 0;
+}
+
+.left-round{
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.no-round{
+       border-radius: 0;
+}
+        
+.button-styles::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #DFFC4A;
+    z-index: -1;
+    transition: all 0.6s;
+    transform: translateX(-15rem) ;
+}
+
+.button-styles:hover{
+    color:#050506;
+    box-shadow: 0 0 15px #DFFC4A, 0 0 5px #DFFC4A;
+}
+
+.button-styles:hover::before{
+    transform: rotateX(0deg);
+}
+
+.active-btn{
+    color:#050506;
+    box-shadow: 0 0 15px #DFFC4A, 0 0 5px #DFFC4A;
+}
+
+.active-btn::before{
+    transform: translateX(0);
+}
+
